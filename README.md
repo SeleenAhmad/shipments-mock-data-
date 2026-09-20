@@ -5,12 +5,16 @@ An end-to-end Power BI project analyzing a mock e-commerce/logistics shipment da
 Domain: E-commerce logistics / last-mile delivery
 Goal: Measure and explain shipment delivery performance — on-time rate, delivery outcomes (Delivered / Returned / Cancelled / Failed / In Transit), and the key drivers behind failed or late deliveries — across carriers, warehouses, origin/destination countries, and product categories.
 Tool: Microsoft Power BI Desktop (data modeling, DAX measures, and report visuals)
-Data: 1,225 mock shipment records, single fact table shipment_mock_data
+Data: 1,225 mock shipment records, single fact table shipment_mock_data.
+
+
 🗂️ Repository Contents
 File	Description
 SHIPMENT_MOCK_DATA.pbix	Power BI Desktop file — data model, DAX measures, and the full report
 shipments_mock_dataset.csv	Raw source dataset (intentionally "dirty" for cleaning practice)
-README.md	Project documentation
+README.md	Project documentation.
+
+
 🧾 Dataset Schema
 Column	Description
 order_id	Unique shipment identifier
@@ -27,6 +31,8 @@ status	Shipment status (Delivered, Returned, Cancelled, Failed Delivery, In Tran
 delivery_date	Actual delivery timestamp
 sla_days_target	Target SLA (days) for delivery
 fail_reason	Reason for failure, where applicable (e.g., Customs Delay, Damaged Package)
+
+
 🧹 Data Cleaning Challenges Addressed
 
 The raw CSV was designed to mimic real-world messy operational data, including:
@@ -51,12 +57,20 @@ Column chart: shipment count by failure reason
 
 Page 2 — Delivery Decomposition
 
-Decomposition tree breaking down Delivered Orders by destination country, product category, shipping days, origin country, carrier, warehouse, and COD amount — for root-cause and drill-down analysis
+Decomposition tree breaking down Delivered Orders by destination country, product category, shipping days, origin country, carrier, warehouse, and COD amount — for root-cause and drill-down analysis.
+
+
+
+
 🔑 Key Measures
 On-Time Rate — share of shipments delivered within their SLA target
 Delivered Orders — count of successfully delivered shipments
 is on time (flag) — whether an individual shipment met its sla_days_target
 shipping days — actual days elapsed between order date and delivery date
+
+
+
+
 🚀 How to Use
 Download SHIPMENT_MOCK_DATA.pbix and open it in Power BI Desktop.
 The data source path may need to be repointed to shipments_mock_dataset.csv on your machine (Home → Transform Data → Data Source Settings).
